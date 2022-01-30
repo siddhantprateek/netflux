@@ -1,0 +1,45 @@
+.ozark {
+  width: 100%;
+}
+
+
+.play-btn {
+  position: relative;
+  left: 5rem;
+  top: -10rem;
+  margin-left: 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 0.2s;
+}
+
+.play-btn:hover {
+  background-color: rgba(255, 255, 255, 0.44);
+}
+
+.info-btn {
+  position: relative;
+  left: 5rem;
+  top: -10rem;
+  margin-left: 1rem;
+  background-color: rgba(139, 139, 139, 0.78);
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+
+.info-btn:hover {
+  background-color: rgba(139, 139, 139, 0.58);
+}
