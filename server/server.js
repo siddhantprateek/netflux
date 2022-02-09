@@ -5,9 +5,6 @@ dotenv.config();
 const PORT = process.env.PORT || 4000
 const app = express();
 
-// app.get('/', (req, res)=>{
-//     res.send('Server is Running Perfect')
-// })
 
 // app.use(express.static(path.join(__dirname, "build")));
 

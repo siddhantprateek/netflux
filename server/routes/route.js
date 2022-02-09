@@ -16,13 +16,15 @@ router.get('/search/movies', (req, res) => {
       };
       
       axios.request(options).then((response) =>{
-            res.json(response.data);
+            res.status(200).res.json(response.data);
+          
       }).catch((error)=> {
           console.error(error);
       });
 })
 
 router.get('/v1/movies.json', (req, res)=>{
+    console.log(req)
     const options = {
         method: 'GET',
         url: 'https://ott-details.p.rapidapi.com/advancedsearch',
@@ -31,9 +33,9 @@ router.get('/v1/movies.json', (req, res)=>{
           end_year: '2020',
           min_imdb: '4',
           max_imdb: '10',
-          genre: 'action',
+          genre: req.query.genre,
           language: 'english',
-          type: 'tvshows',
+          type: req.query.type,
           sort: 'latest',
           page: '1'
         },
