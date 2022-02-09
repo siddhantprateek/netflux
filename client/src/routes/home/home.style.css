@@ -2,16 +2,27 @@
   width: 100%;
 }
 
-
+/* for removing horizontal scroll bar from the page */
+.home {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  overflow-x: scroll; 
+}
+.banner-btn{
+  display: flex;
+}
 .play-btn {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 5rem;
   top: -10rem;
   margin-left: 2rem;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+  padding: .4rem 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   border: none;
   outline: none;
@@ -19,20 +30,25 @@
   vertical-align: middle;
   transition: all 0.2s;
 }
-
+.bn-icon{
+  margin-right: 10px;
+}
 .play-btn:hover {
-  background-color: rgba(255, 255, 255, 0.44);
+  background-color: rgba(255, 255, 255, 0.575);
 }
 
 .info-btn {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 5rem;
   top: -10rem;
   margin-left: 1rem;
   background-color: rgba(139, 139, 139, 0.78);
   border-radius: 5px;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: .4rem 1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   border: none;
   outline: none;
@@ -41,5 +57,18 @@
 }
 
 .info-btn:hover {
-  background-color: rgba(139, 139, 139, 0.58);
+  background-color: rgba(139, 139, 139, 0.452);
+}
+
+.hollywood-action {
+  padding: 1rem;
+  position: relative;
+  margin-top: -10rem;
+}
+
+.trending-now,
+.tv-shows,
+.children-family-tv,
+.Only-on-Netflix {
+  padding: 1rem;
 }

@@ -1,0 +1,32 @@
+.movie-badge{
+    width: 130px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: rgb(88, 88, 88);
+    margin-left: 1rem;
+    transition: all 1s;
+    flex-shrink: 0;
+}
+
+.movie-badge .banner {
+    border-radius: 5px;
+}
+
+.netflix-logo{
+    position: relative;
+    margin-top: -9.5rem;
+}
+
+.movie-badge:hover{
+    transform: scale(1.2)
+}
+.movie-banner{
+    height: 80%;
+}
+.movie-options {
+    position: relative;
+    margin-top: 6rem;
+    padding: 0 10px;
+    height: 20%;
+    /* background-color: rgb(109, 109, 109); */
+}

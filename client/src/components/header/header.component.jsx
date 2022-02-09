@@ -2,7 +2,7 @@ import NETFLUX from '../../assets/netfux-logox.png';
 import Avatar from '../../assets/Netflix-avatar.png';
 import SearchIcon from '../../assets/search-icon.png';
 import './header.style.css';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
   <div className="nav-bar">
@@ -10,10 +10,10 @@ const Header = () => {
             <div className='nav-left'>
                 <img src={NETFLUX} height='35px' alt="" />
                 <ul>
-                    <li>Home</li>
-                    <li>TV Shows</li>
-                    <li>New & Popular</li>
-                    <li>My List</li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/tvshows'>TV Shows</Link></li>
+                    <li><Link to='/new'>New & Popular</Link></li>
+                    <li><Link to='/mylist'>My List</Link></li>
                 </ul>
             </div>
             <div className='nav-right'>
