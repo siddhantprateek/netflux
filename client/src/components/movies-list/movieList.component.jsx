@@ -1,28 +1,48 @@
 import React,{ useState, useEffect } from "react";
 import MovieBadge from "../movie-badge/movieBadge.component";
+import { Swiper } from '../../../node_modules/swiper/react/swiper';
+import { SwiperSlide } from '../../../node_modules/swiper/react/swiper-slide';
+import '../../../node_modules/swiper/swiper.min.css'; 
 import './movielist.styles.css';
 import axios from 'axios';
-const MovieList = () => {
+const MovieList = ({genre, type}) => {
   const [movies, setMovies ] = useState();
+  
+
   useEffect(()=> {
     const option = {
       method: 'GET',
-      url: 'http://localhost:4000/api/v1/movies.json'
+      url: 'http://localhost:4000/api/v1/movies.json',
+      params: {
+        genre: genre,
+        type: type,
+      }
     };
     axios.request(option).then((response) => {
         setMovies(response.data.results);
     }).catch((error) => {
       console.error(error);
     })
-  }, [])
+  })
 
-  const first10movies = movies?.slice(4, 24);
+  // const first10movies = .slice(4, 24);
   console.log( "MOVIES:", movies)
   return (
-  <div className="movie-list">
-      {first10movies?.map((movie) =>(
-        <MovieBadge movie={movie}/>
-      ))}
-  </div>
+    <Swiper
+    spaceBetween={50}
+    slidesPerView={10.5}
+    pagination={{ clickable: true }}
+    onSlideChange={() => console.log('slide change')}
+    onSwiper={(swiper) => console.log(swiper)}
+  >
+    <div className="movie-list">
+        {movies?.map((movie) =>(
+          <SwiperSlide>
+            <MovieBadge movie={movie}/>
+          </SwiperSlide>
+        ))}
+    </div>
+
+  </Swiper>
 )};
 export default MovieList;
