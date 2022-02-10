@@ -8,7 +8,7 @@ const MovieBadge = ({ movie }) => {
         <img className="banner" src={movie.imageurl} alt="No poster" height="200px"/>
       </div>
       <div className="netflix-logo">
-        <img className="netflix" src={NETFLIX} height="40px" alt="" />
+        <img className="netflix" src={NETFLIX} height="30px" alt="" />
       </div>
       <div className="movie-options">
         

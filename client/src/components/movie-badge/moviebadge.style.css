@@ -3,9 +3,9 @@
     height: 200px;
     border-radius: 5px;
     background-color: rgb(88, 88, 88);
-    margin-left: 1rem;
     transition: all 1s;
     flex-shrink: 0;
+    margin: 1.5rem 1rem;
 }
 
 .movie-badge .banner {
@@ -18,7 +18,7 @@
 }
 
 .movie-badge:hover{
-    transform: scale(1.2)
+    transform: scale(1.2);
 }
 .movie-banner{
     height: 80%;

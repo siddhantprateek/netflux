@@ -12,7 +12,7 @@ const MovieList = ({genre, type}) => {
   useEffect(()=> {
     const option = {
       method: 'GET',
-      url: 'http://localhost:4000/api/v1/movies.json',
+      url: `http://localhost:4000/api/v1/movies/${genre}/${type}`,
       params: {
         genre: genre,
         type: type,
@@ -29,15 +29,15 @@ const MovieList = ({genre, type}) => {
   console.log( "MOVIES:", movies)
   return (
     <Swiper
-    spaceBetween={50}
-    slidesPerView={10.5}
+    spaceBetween={80}
+    slidesPerView={`auto`}
     pagination={{ clickable: true }}
-    onSlideChange={() => console.log('slide change')}
-    onSwiper={(swiper) => console.log(swiper)}
+    // onSlideChange={() => console.log('slide change')}
+    // onSwiper={(swiper) => console.log(swiper)}
   >
     <div className="movie-list">
         {movies?.map((movie) =>(
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <MovieBadge movie={movie}/>
           </SwiperSlide>
         ))}
