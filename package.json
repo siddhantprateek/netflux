@@ -4,7 +4,7 @@
   "description": "![](https://i.imgur.com/QflsiAd.png)",
   "main": "index.js",
   "scripts": {
-    "dev" : "concurrently \"react-scripts start\" \"cd server; nodemon server.js\" ",
+    "dev": "concurrently \"react-scripts start\" \"cd server; nodemon server.js\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
