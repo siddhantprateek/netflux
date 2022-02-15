@@ -1,13 +1,14 @@
 import React,{ useState, useEffect } from "react";
 import MovieBadge from "../movie-badge/movieBadge.component";
-import { Swiper } from '../../../node_modules/swiper/react/swiper';
-import { SwiperSlide } from '../../../node_modules/swiper/react/swiper-slide';
-import '../../../node_modules/swiper/swiper.min.css'; 
+import '../../../node_modules/swiper/swiper.min.css';
 import './movielist.styles.css';
+// import Carousel from "../carousel/carousel.components";
 import axios from 'axios';
 const MovieList = ({genre, type}) => {
   const [movies, setMovies ] = useState();
-  
+  // const sliders = document.getElementById('movie-list');
+  const slideScrollLeft = () => {}
+  const slideScrollRight = () => {}
 
   useEffect(()=> {
     const option = {
@@ -19,30 +20,25 @@ const MovieList = ({genre, type}) => {
       }
     };
     axios.request(option).then((response) => {
-        setMovies(response.data.results);
+      setMovies(response.data.results);
     }).catch((error) => {
       console.error(error);
     })
   })
-
-  // const first10movies = .slice(4, 24);
+  
+  
+  // const first10movies = movies?.slice(5, 10);
   console.log( "MOVIES:", movies)
   return (
-    <Swiper
-    spaceBetween={80}
-    slidesPerView={`auto`}
-    pagination={{ clickable: true }}
-    // onSlideChange={() => console.log('slide change')}
-    // onSwiper={(swiper) => console.log(swiper)}
-  >
-    <div className="movie-list">
-        {movies?.map((movie) =>(
-          <SwiperSlide className="swiper-slide">
-            <MovieBadge movie={movie}/>
-          </SwiperSlide>
-        ))}
-    </div>
+    <div className="carousel-container">
+      <div id="movie-list" className="movie-list">
 
-  </Swiper>
+          {movies?.map((movie) =>(
+            <MovieBadge movie={movie}/>
+            ))}
+            <p className="switchLeft sliderButton" onClick={slideScrollLeft()} >◄</p>
+            <p className="switchRight sliderButton" onClick={slideScrollRight()}>►</p>
+      </div>
+    </div>
 )};
 export default MovieList;

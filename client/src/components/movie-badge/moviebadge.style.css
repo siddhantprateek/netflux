@@ -1,14 +1,29 @@
 .movie-badge{
-    width: 130px;
+    width: 135px;
     height: 200px;
     border-radius: 5px;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(34, 33, 33);
     transition: all 1s;
     flex-shrink: 0;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem .5rem;
+    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
 }
-
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 10px;
+    text-align: center;
+}
+.mov-title{
+    position: relative;
+    /* z-index: -1; */
+}
 .movie-badge .banner {
+    position: relative;
     border-radius: 5px;
 }
 
