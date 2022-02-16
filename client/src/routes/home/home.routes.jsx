@@ -7,8 +7,9 @@ import MovieList from "../../components/movies-list/movieList.component";
 // import { Swiper } from "../../../node_modules/swiper/react/swiper";
 // import { SwiperSlide } from "../../../node_modules/swiper/react/swiper-slide";
 // import Carousel from "../../components/carousel/carousel.components";
-import "../../../node_modules/swiper/swiper.min.css";
+// import "../../../node_modules/swiper/swiper.min.css";
 import banner from "./banner.json";
+import '../../components/movies-list/movielist.styles.css'
 // import axios from 'axios';
 const Home = () => {
   return (
@@ -44,7 +45,9 @@ const Home = () => {
       </div>
 
       <div className="trending top-10">
+        <div className="carousel-container">
         <h4>Top10</h4>
+
           {banner.map((mov) => (
               <div className="trend-num">
                 <h3 className="number">{mov.rank}</h3>
@@ -53,6 +56,9 @@ const Home = () => {
                 </div>
               </div>
           ))}
+                      <p className="switchLeft sliderButton" >◄</p>
+            <p className="switchRight sliderButton" >►</p>
+        </div>
       </div>
 
       <div className="trending-now">

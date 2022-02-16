@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import MovieBadge from "../movie-badge/movieBadge.component";
-import '../../../node_modules/swiper/swiper.min.css';
+// import '../../../node_modules/swiper/swiper.min.css';
 import './movielist.styles.css';
 // import Carousel from "../carousel/carousel.components";
 import axios from 'axios';

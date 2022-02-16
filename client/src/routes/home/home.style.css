@@ -6,7 +6,7 @@
 .home {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
-  overflow-x: scroll; 
+  overflow-x: hidden; 
 }
 .banner-btn{
   display: flex;
@@ -82,7 +82,6 @@
 .trend-num{
   height: 250px;
   width: 250px;
-  border: 2px solid black;
   cursor: pointer;
 }
 
