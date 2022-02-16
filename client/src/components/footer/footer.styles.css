@@ -1,0 +1,48 @@
+
+footer{
+    height: 22rem;
+    background-color: rgb(19, 19, 19);
+    padding: 20px;
+}
+.socials{
+    margin: 2rem;
+}
+.socials img{
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+.linkto{
+    height: 2rem;
+    width: 20rem;
+}
+.links a {
+    color: grey;
+    font-size: 1.2rem;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+.serice-code{
+    margin-left: 2rem;
+    padding: 10px;
+    background-color: transparent;
+    color: grey;
+    border: 1px solid grey;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.serice-code:hover{
+    color: white;
+}
+
+.content{
+    margin: 2rem;
+    color: grey;
+}
