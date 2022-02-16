@@ -6,8 +6,7 @@
 
 Netflix clone
 
-
-https://user-images.githubusercontent.com/43869046/153218915-8f2a9ea7-5817-4520-8dcb-6aec5d2682bd.mp4
+https://user-images.githubusercontent.com/43869046/154195105-4ca752de-7378-4cbe-9d0e-01f1cd321360.mp4
 
 
 ## Tech Stack
