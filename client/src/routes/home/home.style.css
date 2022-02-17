@@ -1,6 +1,14 @@
 .home-preview {
   width: 100%;
 }
+.video-content{
+  position: relative;
+  top: -25rem;
+  left: 7rem;
+}
+.moneyheist-logo{
+  height: 4rem;
+}
 
 /* for removing horizontal scroll bar from the page */
 .home {
@@ -17,7 +25,7 @@
   justify-content: center;
   align-items: center;
   left: 5rem;
-  top: -10rem;
+  top: -25rem;
   margin-left: 2rem;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
@@ -43,7 +51,7 @@
   justify-content: center;
   align-items: center;
   left: 5rem;
-  top: -10rem;
+  top: -25rem;
   margin-left: 1rem;
   background-color: rgba(139, 139, 139, 0.78);
   border-radius: 5px;
@@ -63,7 +71,7 @@
 .hollywood-action {
   padding: 1rem;
   position: relative;
-  margin-top: -10rem;
+  margin-top: -20rem;
 }
 
 .trending-now,

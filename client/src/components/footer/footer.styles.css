@@ -43,6 +43,7 @@ footer{
 }
 
 .content{
-    margin: 2rem;
+    margin: 1rem;
     color: grey;
+    padding: 1rem;
 }
