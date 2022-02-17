@@ -5,6 +5,9 @@
 ## About 
 
 Netflix clone
+![](https://i.imgur.com/YXKFVTE.jpg)
+
+## Preview
 
 https://user-images.githubusercontent.com/43869046/154530537-1a3d8696-cb2f-4a8d-8e9b-3ae67879967b.mp4
 
