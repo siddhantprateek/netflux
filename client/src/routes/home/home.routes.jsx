@@ -6,14 +6,18 @@ import MovieList from "../../components/movies-list/movieList.component";
 import banner from "./banner.json";
 import '../../components/movies-list/movielist.styles.css';
 import VIDEO from "../../assets/moneyheist.mp4";
-
+import moneyheist from "../../assets/money-heist.png"
 const Home = () => {
   return (
     <div className="home">
       <div className="home-banner">
-      <video className="home-preview" autoPlay loop muted>
+        <video className="home-preview" autoPlay loop muted>
             <source src={VIDEO} type="video/mp4"/>
         </video>
+        <div className="video-content">
+          <img src={moneyheist} className="moneyheist-logo" alt="" />
+          <h2>A break in the investigation and a mistake by <br/>one of the theives puts the professor at serious <br/> risk of being discoverd.</h2>
+        </div>
         {/* <img className="home-preview" src={OZARK} alt="" srcset="" /> */}
         <div className="banner-btn">
           <button className="play-btn">
