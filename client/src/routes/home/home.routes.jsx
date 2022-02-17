@@ -1,21 +1,20 @@
-import OZARK from "../../assets/ozark-59758728cf49f.jpg";
+// import OZARK from "../../assets/ozark-59758728cf49f.jpg";
 import "./home.style.css";
 import PLAY from "../../assets/play.png";
 import INFO from "../../assets/info.png";
 import MovieList from "../../components/movies-list/movieList.component";
-// import { useEffect } from 'react';
-// import { Swiper } from "../../../node_modules/swiper/react/swiper";
-// import { SwiperSlide } from "../../../node_modules/swiper/react/swiper-slide";
-// import Carousel from "../../components/carousel/carousel.components";
-// import "../../../node_modules/swiper/swiper.min.css";
 import banner from "./banner.json";
-import '../../components/movies-list/movielist.styles.css'
-// import axios from 'axios';
+import '../../components/movies-list/movielist.styles.css';
+import VIDEO from "../../assets/moneyheist.mp4";
+
 const Home = () => {
   return (
     <div className="home">
       <div className="home-banner">
-        <img className="ozark" src={OZARK} alt="" srcset="" />
+      <video className="home-preview" autoPlay loop muted>
+            <source src={VIDEO} type="video/mp4"/>
+        </video>
+        {/* <img className="home-preview" src={OZARK} alt="" srcset="" /> */}
         <div className="banner-btn">
           <button className="play-btn">
             <img
@@ -64,7 +63,6 @@ const Home = () => {
       <div className="trending-now">
         <h4>Trending Now</h4>
         <MovieList genre="romance" type="movies" />
-        {/* {() => {setTimeout(<MovieList genre="romance" type="movies" />, 5000)}} */}
       </div>
       <div className="tv-shows">
         <h4>TV Shows</h4>
@@ -76,7 +74,7 @@ const Home = () => {
       </div>
       <div className="Only-on-Netflix">
         <h4>Only On Netflix</h4>
-        <MovieList genre="action" type="movies"/>
+        <MovieList genre="action" type="movies" />
       </div>
     </div>
   );

@@ -57,9 +57,11 @@ const Footer = () => {
                     <a href="/">Contact Us</a>
                 </div>
             </div>
-            <button className="serice-code">Service Code</button>
+            <a href="https://github.com/siddhantprateek/netflux" target="__blank">
+                <button className="serice-code">Source Code</button>
+            </a>
             <div className="content">
-            <p>©️ 2022, Netflux</p>  
+            <p>©️ 2022, Netflux, Made with ❤️, by Siddhant</p>  
             </div>
         </footer>
 )}
