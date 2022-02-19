@@ -1,4 +1,4 @@
-// import OZARK from "../../assets/ozark-59758728cf49f.jpg";
+
 import "./home.style.css";
 import PLAY from "../../assets/play.png";
 import INFO from "../../assets/info.png";
@@ -14,11 +14,10 @@ const Home = () => {
         <video className="home-preview" autoPlay loop muted>
             <source src={VIDEO} type="video/mp4"/>
         </video>
-        <div className="video-content">
-          <img src={moneyheist} className="moneyheist-logo" alt="" />
+          <div className="video-content">
+            <img src={moneyheist} className="moneyheist-logo" alt="" />
           <h2>A break in the investigation and a mistake by <br/>one of the theives puts the professor at serious <br/> risk of being discoverd.</h2>
         </div>
-        {/* <img className="home-preview" src={OZARK} alt="" srcset="" /> */}
         <div className="banner-btn">
           <button className="play-btn">
             <img
@@ -43,7 +42,7 @@ const Home = () => {
         </div>
       </div>
       <div className="hollywood-action">
-        <h4>Hollywood Movies</h4>
+        <h3>Hollywood Movies</h3>
         <MovieList genre="Crime" type="movies" />
       </div>
 
