@@ -13,7 +13,6 @@ const MovieBadge = ({ movie }) => {
   <div className='movie-badge'
     onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}
-
   >
       <div className="movie-banner">
         <img className="banner" src={movie.imageurl} alt="" height="200px"/>
@@ -33,7 +32,6 @@ const MovieBadge = ({ movie }) => {
             <img src={ADD}className="media-icon" alt="" />
             <img src={DISLIKE} className="media-icon" alt="" />
             <img src={LIKE} className="media-icon" alt="" />
-
         </div>)
       }
   </div>

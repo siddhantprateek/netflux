@@ -1,8 +1,9 @@
-
-const MovieModal = ({title, src, rating, genre, release, synopsis, type}) => {
+//title, src, rating, genre, release, synopsis, type
+const MovieModal = ({title, src}) => {
     return(
         <div>
-
+            <p>{title}</p>
+            <img src={src} alt="" />
         </div>
 )}
 
