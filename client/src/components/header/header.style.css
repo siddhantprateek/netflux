@@ -1,52 +1,87 @@
-.nav-bar{
-    position: fixed;
-    z-index: 2;  
-    width: 100%;
-    background: linear-gradient(180deg, #000000 36.46%, rgba(102, 102, 102, 0) 100%);
+.nav-bar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    #000000 36.46%,
+    rgba(102, 102, 102, 0) 100%
+  );
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
-.nav-container{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
-.nav-left{
-    display: flex;
-}
-
-.nav-left ul{
-    display: flex;
-    margin-top: 0.2rem;
+.nav-left {
+  display: flex;
 }
 
-.nav-left ul li{
-    margin-left: 2rem;
-    list-style: none;
-    cursor: pointer;
+.nav-left ul {
+  display: flex;
+  margin-top: 0.2rem;
+}
+
+.nav-left ul li {
+  margin-left: 2rem;
+  list-style: none;
+  cursor: pointer;
 }
 
 /* nav right */
 
-.avatar{
-    margin-right: 2rem;
-    cursor: pointer;
+.avatar {
+  margin-right: 2rem;
+  cursor: pointer;
 }
 
-.nav-right{
-    display: flex;
+.nav-right {
+  display: flex;
 }
 
-.nav-right ul{
-    display: flex;
-    margin-top: 0.3rem;
+.nav-right ul {
+  display: flex;
+  margin-top: 0.3rem;
 }
 
-.nav-right ul li{
-    margin-right: 2rem;
-    list-style: none;
-    cursor: pointer;
+.nav-right ul li {
+  margin-right: 2rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* dropdown */
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  margin-left: -8rem;
+  background-color: #141414c2;
+  min-width: 10rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.user-dropdown a {
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+}
+.user-dropdown a:nth-child(2) {
+    border-top: 1px solid rgb(87, 87, 87);
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+.user-dropdown a:last-child { border-top: 1px solid rgb(87, 87, 87); }
+
+.user-dropdown a:hover {
+  background-color: #5a5a5a67;
+}
+
+.dropdown:hover .user-dropdown {
+  display: block;
 }

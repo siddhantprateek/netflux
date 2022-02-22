@@ -3,6 +3,9 @@ import Avatar from '../../assets/Netflix-avatar.png';
 import SearchIcon from '../../assets/search-icon.png';
 import './header.style.css';
 import { Link } from 'react-router-dom';
+
+
+
 const Header = () => {
   return (
   <div className="nav-bar">
@@ -21,9 +24,15 @@ const Header = () => {
                     <li><img src={SearchIcon} alt=''/></li>
                     <li>Children</li>
                 </ul>
-                <img className='avatar' src={Avatar} height='30px' alt="" />
-                <div className="user-dropdown">
-                    
+                <div className='dropdown'>
+                    <img className='avatar' src={Avatar} height='30px' alt="" />
+                    <div className="user-dropdown">
+                        <a href="/">Manage Profiles</a>
+                        <a href="/">Children</a>
+                        <a href="/">Account</a>
+                        <a href="/">Help Center</a>
+                        <a href="/">Sign out of Netflix</a>
+                    </div>
                 </div>
             </div>
       </header>
