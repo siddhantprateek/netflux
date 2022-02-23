@@ -1,17 +1,19 @@
 
 import "./home.style.css";
-import PLAY from "../../assets/play.png";
-import INFO from "../../assets/info.png";
+import { PLAY, INFO, VIDEO, moneyheist,
+  MUTE,
+  UNMUTE
+} from "../../assets";
 import MovieList from "../../components/movies-list/movieList.component";
 import banner from "./banner.json";
 import '../../components/movies-list/movielist.styles.css';
-import VIDEO from "../../assets/moneyheist.mp4";
-import moneyheist from "../../assets/money-heist.png"
+import { useState } from "react";
 const Home = () => {
+  const [ muted, setMute ] = useState(false);
   return (
     <div className="home">
       <div className="home-banner">
-        <video className="home-preview" autoPlay loop muted>
+        <video className="home-preview" autoPlay loop muted={muted}>
             <source src={VIDEO} type="video/mp4"/>
         </video>
           <div className="video-content">
@@ -19,28 +21,36 @@ const Home = () => {
           <h2>A break in the investigation and a mistake by <br/>one of the theives puts the professor at serious <br/> risk of being discoverd.</h2>
         </div>
         <div className="banner-btn">
-          <button className="play-btn">
-            <img
-              className="bn-icon"
-              src={PLAY}
-              height="20px"
-              alt=""
-              srcset=""
-            />{" "}
-            Play
-          </button>
-          <button className="info-btn">
-            <img
-              className="bn-icon"
-              src={INFO}
-              height="30px"
-              alt=""
-              srcset=""
-            />
-            More Info
-          </button>
-        </div>
+            <button className="play-btn">
+              <img
+                className="bn-icon"
+                src={PLAY}
+                height="20px"
+                alt=""
+                srcset=""
+              />{" "}
+              Play
+            </button>
+            <button className="info-btn">
+              <img
+                className="bn-icon"
+                src={INFO}
+                height="30px"
+                alt=""
+                srcset=""
+              />
+              More Info
+            </button>
+              <img
+                className="volume-btn"
+                onClick={() => setMute(!muted)}
+                src={muted ? MUTE : UNMUTE}
+                height="35px"
+                alt=""
+              />
+          </div>
       </div>
+
       <div className="hollywood-action">
         <h3>Hollywood Movies</h3>
         <MovieList genre="Crime" type="movies" />

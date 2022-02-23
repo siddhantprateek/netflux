@@ -68,6 +68,17 @@
   background-color: rgba(139, 139, 139, 0.452);
 }
 
+.volume-btn {
+  position: relative;
+  left: 5rem;
+  top: -25rem;
+  margin-left: 1rem;
+  padding: .4rem 1rem;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+
 .hollywood-action {
   padding: 1rem;
   position: relative;
