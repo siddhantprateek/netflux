@@ -6,7 +6,6 @@
     transition: all 1s;
     flex-shrink: 0;
     margin: 1.5rem .5rem;
-    z-index: 0;
     overflow: hidden;
     cursor: pointer;
 }

@@ -1,0 +1,86 @@
+.modal {
+    position: absolute;
+    z-index: 2000;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .close-div{
+      display: flex;
+      justify-content: flex-end;
+  }
+
+  .close {
+      font-size: 3rem;
+  }
+
+  .movie-modal-content {
+    position: fixed;
+    background: rgb(34, 34, 34);
+    width: 80rem;
+    height: 35rem;
+    top:50%;   
+    left:50%;
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 20000;
+    transform: translate(-50%,-50%);
+  }
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+
+  .modal-banner{
+      height: 30rem;
+      border-radius: 10px;
+  }
+
+  .modal-movie-desc{
+    display: flex;
+  }
+
+  .movie-desc-content{
+    padding: 1rem 4rem;
+  }
+  .genre-tag{
+    margin-left: .4rem; 
+  }
+  .movie-title-header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal-title{
+    font-size: 4rem;
+  }
+
+  .synop-genre{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .movie-rating{
+    font-size: 2.5rem;
+    color: rgb(105, 218, 105);
+  }
+
+  .synopsis-section{
+    margin-right: 12rem;
+  }
+
+  .synopsis, 
+  .released,
+  .movie-type,
+  .movie-genre{
+    font-size: 1.2rem;
+    line-height: -1rem;
+  }
+

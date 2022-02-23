@@ -5,14 +5,17 @@ import PLAY from '../../assets/mediaicons/play.png';
 import ADD from '../../assets/mediaicons/add.png';
 import DISLIKE from '../../assets/mediaicons/dislike.png';
 import LIKE from '../../assets/mediaicons/like.png';
+import MovieModal from '../movie-modal/movie-modal.components';
 
 import { useState } from 'react';
 const MovieBadge = ({ movie }) => {
   const [ isShown, setIsShown ] = useState(false);
+  const [ show, setShowModal] = useState(false);
   return (
   <div className='movie-badge'
     onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}
+    onClick={() => setShowModal(!show)}
   >
       <div className="movie-banner">
         <img className="banner" src={movie.imageurl} alt="" height="200px"/>
@@ -34,6 +37,7 @@ const MovieBadge = ({ movie }) => {
             <img src={LIKE} className="media-icon" alt="" />
         </div>)
       }
+      <MovieModal show={show} movie={movie}/>
   </div>
 )};
 export default MovieBadge;
