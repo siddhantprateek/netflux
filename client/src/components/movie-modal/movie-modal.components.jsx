@@ -5,7 +5,7 @@ const MovieModal = ({ show, movie }) => {
 
   const showHideClassName = show ? "modal display-block" : "modal display-none";
   return (
-    <div className={showHideClassName} >
+    <div className={showHideClassName}>
 
         <div className="movie-modal-content">
             <div className="close-div">

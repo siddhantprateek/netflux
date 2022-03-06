@@ -3,10 +3,12 @@ import Avatar from '../../assets/Netflix-avatar.png';
 import SearchIcon from '../../assets/search-icon.png';
 import './header.style.css';
 import { Link } from 'react-router-dom';
-
+import { useState } from 'react';
 
 
 const Header = () => {
+  const [ showsearch, setSearch ] = useState(false)
+  const setshowClass = showsearch ? 'browse display-block' : 'browse display-none';
   return (
   <div className="nav-bar">
       <header className='nav-container'>
@@ -21,13 +23,14 @@ const Header = () => {
             </div>
             <div className='nav-right'>
                 <ul>
-                    <li><img src={SearchIcon} alt=''/></li>
+                    <li><img src={SearchIcon} onClick={() => setSearch(!showsearch)} alt=''/></li>
+                    <li><input type="text" className={setshowClass} placeholder='Titles, People, Genre'/></li>
                     <li>Children</li>
                 </ul>
                 <div className='dropdown'>
                     <img className='avatar' src={Avatar} height='30px' alt="" />
                     <div className="user-dropdown">
-                        <a href="/">Manage Profiles</a>
+                        <a href="/manage/profiles">Manage Profiles</a>
                         <a href="/">Children</a>
                         <a href="/">Account</a>
                         <a href="/">Help Center</a>

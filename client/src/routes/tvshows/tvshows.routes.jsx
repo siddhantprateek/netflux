@@ -14,7 +14,7 @@ const TVSHOW = () => {
   return (
     <div className="tvshows">
             <div className="home-banner">
-            <video className='home-preview' autoPlay loop muted={muted}>
+            <video className='home-preview' autoPlay loop muted={!muted}>
               <source src={`https://user-images.githubusercontent.com/43869046/154786309-e2ccdef6-9dfc-461b-95a5-bed968e6c4e4.mp4`} type="video/mp4"/>
             </video>
           <div className="video-content">
@@ -45,7 +45,7 @@ const TVSHOW = () => {
           <img
                 className="volume-btn"
                 onClick={() => setMute(!muted)}
-                src={muted ? MUTE : UNMUTE}
+                src={!muted ? MUTE : UNMUTE}
                 height="35px"
                 alt=""
               />

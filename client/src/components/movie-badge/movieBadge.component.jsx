@@ -5,23 +5,26 @@ import PLAY from '../../assets/mediaicons/play.png';
 import ADD from '../../assets/mediaicons/add.png';
 import DISLIKE from '../../assets/mediaicons/dislike.png';
 import LIKE from '../../assets/mediaicons/like.png';
+import ADDED from '../../assets/mediaicons/added.png';
 import MovieModal from '../movie-modal/movie-modal.components';
 
 import { useState } from 'react';
 const MovieBadge = ({ movie }) => {
   const [ isShown, setIsShown ] = useState(false);
   const [ show, setShowModal] = useState(false);
+  const [ list, setList ] = useState(false);
+
   return (
   <div className='movie-badge'
     onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}
-    onClick={() => setShowModal(!show)}
   >
-      <div className="movie-banner">
-        <img className="banner" src={movie.imageurl} alt="" height="200px"/>
+      <div className="movie-banner" onClick={() => setShowModal(!show)}>
+       <img className="banner" src={movie.imageurl} alt="" height="200px"/> 
         <div className="title">
           <p className='mov-title'>{movie.title}</p>
         </div>
+        <MovieModal show={show} movie={movie}/>
       </div>
 
       <div className="netflix-logo">
@@ -32,12 +35,12 @@ const MovieBadge = ({ movie }) => {
         isShown && (
         <div className="movie-options">
             <img src={PLAY} className="media-icon" alt="" />
-            <img src={ADD}className="media-icon" alt="" />
-            <img src={DISLIKE} className="media-icon" alt="" />
+            <img src={list ? ADDED : ADD}className="media-icon" alt="" onClick={() => setList(!list)}/>
             <img src={LIKE} className="media-icon" alt="" />
+            <img src={DISLIKE} className="media-icon" alt="" />
         </div>)
       }
-      <MovieModal show={show} movie={movie}/>
+      
   </div>
 )};
 export default MovieBadge;

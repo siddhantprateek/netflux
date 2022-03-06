@@ -85,3 +85,13 @@ a {
 .dropdown:hover .user-dropdown {
   display: block;
 }
+
+.browse {
+  background-color: #111111e1;
+  outline: none;
+  border: 2px solid whitesmoke;
+  padding: .4rem;
+  width: 100%;
+  color: whitesmoke;
+
+}
