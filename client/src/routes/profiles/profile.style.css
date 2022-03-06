@@ -1,0 +1,45 @@
+.manage-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+}
+
+.profiles{
+    display: flex;
+}
+
+.pr-avatar {
+    height: 10rem;
+    margin-right:2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.pr-avatar:hover{
+    transform: scale(1.08);
+}
+
+
+.add-profile{
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(90, 92, 90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.add-profile:hover{
+    background-color: rgb(158, 160, 158);
+
+}
+
+.add-profile p {
+    color: rgb(224, 224, 224);
+}
