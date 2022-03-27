@@ -1,0 +1,30 @@
+.no-match-page{
+    background-image: url('https://www.cgw.com/images/LostInSpaceSnow245.jpg');
+    background-size: cover;
+    filter: contrast(80%);
+    padding: 4rem 0;
+    height: 50rem;
+    /* color: black; */
+}
+
+.no-match-container {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.no-match-container h1 {
+    font-size: 4rem;
+}
+
+
+.Netflix-home-btn {
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: black;
+}

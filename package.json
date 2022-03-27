@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/siddhantprateek/netflux#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
     "concurrently": "^7.0.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "react-redux": "^7.2.6"
   }
 }

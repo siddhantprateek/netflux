@@ -7,6 +7,7 @@ import {
   UNMUTE
 } from "../../assets";
 import doctorstrange from "../../assets/doctor-strange.png"
+import { STRANGE } from "../../assets";
 import './tvshows.styles.css';
 
 const TVSHOW = () => {
@@ -15,7 +16,7 @@ const TVSHOW = () => {
     <div className="tvshows">
             <div className="home-banner">
             <video className='home-preview' autoPlay loop muted={!muted}>
-              <source src={`https://user-images.githubusercontent.com/43869046/154786309-e2ccdef6-9dfc-461b-95a5-bed968e6c4e4.mp4`} type="video/mp4"/>
+              <source src={STRANGE} type="video/mp4"/>
             </video>
           <div className="video-content">
             <img src={doctorstrange} className="moneyheist-logo" alt="" />

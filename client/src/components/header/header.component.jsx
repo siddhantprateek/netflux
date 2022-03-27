@@ -13,7 +13,9 @@ const Header = () => {
   <div className="nav-bar">
       <header className='nav-container'>
             <div className='nav-left'>
-                <img src={NETFLUX} height='35px' alt="" />
+                <Link to="/">
+                    <img src={NETFLUX} height='35px' alt="" />
+                </Link>
                 <ul>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/tvshows'>TV Shows</Link></li>
