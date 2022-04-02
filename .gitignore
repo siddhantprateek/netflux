@@ -5,7 +5,7 @@ node_modules
 /client/node_modules
 /client/.pnp
 /client/.pnp.js
-
+.idea
 # testing
 /client/coverage
 
@@ -26,3 +26,6 @@ node_modules
 /server/.vscode
 /server/.env
 /server/node_modules
+
+config.json
+.env
