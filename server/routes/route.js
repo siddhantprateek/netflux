@@ -53,7 +53,6 @@ router.get('/v1/movies/:genre/:type', (req, res) => {
 })
 
 router.get('/v1/movies.json', (req, res)=>{
-    console.log(req)
     const options = {
         method: 'GET',
         url: 'https://ott-details.p.rapidapi.com/advancedsearch',
@@ -79,5 +78,16 @@ router.get('/v1/movies.json', (req, res)=>{
           console.error(error);
       });
 })
+
+router.get('/v1/tmdb', (req, res) => {
+  console.log('tmdb api')
+  // const URL = "https://api.themoviedb.org/3/movie/550?api_key=c96214dc2fc0c7a95518471e8c0ad1f3&language=en-US/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10"
+  axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${process.env.TMDB_API}&language=en-US/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+
+})
+
+
 
 module.exports = router;

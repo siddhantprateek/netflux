@@ -5,23 +5,16 @@ dotenv.config();
 const PORT = process.env.PORT || 4000
 const app = express();
 
-
-// app.use(express.static(path.join(__dirname, "build")));
-
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// })
-
 app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('server is running');
 })
 
-app.use('/api', require('./routes/route'))
+app.use('/api', require('./routes/route.js'))
 
 app.listen(PORT,() => {
-    console.log(`Server running at http://localhost:${PORT}/api/v1/movies.json`)
+    console.log(`Server running at http://localhost:${PORT}/api/v1/tmdb`)
 })
 
 
