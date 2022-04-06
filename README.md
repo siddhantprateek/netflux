@@ -9,7 +9,9 @@ Netflix clone
 
 ## Preview
 
-https://user-images.githubusercontent.com/43869046/154530537-1a3d8696-cb2f-4a8d-8e9b-3ae67879967b.mp4
+
+
+https://user-images.githubusercontent.com/43869046/161914746-617b6157-dc51-4b2c-8813-f7ec4cb2fa7d.mp4
 
 
 
@@ -17,6 +19,7 @@ https://user-images.githubusercontent.com/43869046/154530537-1a3d8696-cb2f-4a8d-
 ## Tech Stack
 - React JS
 - Node Js and Express Js
-- CassandraDB
+- MongoDB
 - API 
     - [OTT details](https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details/)
+    - [TMDB]()
