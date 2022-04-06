@@ -1,34 +1,22 @@
 import React, { useState, useEffect } from "react";
 import MovieBadge from "../movie-badge/movieBadge.component";
 import "./movielist.styles.css";
-import axios from "axios";
+import axios from "../../config/axios";
 
 const MovieList = ({ genre, type }) => {
   const [movies, setMovies] = useState();
   const slideScrollLeft = () => {};
   const slideScrollRight = () => {};
+
   useEffect(() => {
-    const option = {
-      method: "GET",
-      url: `http://localhost:4000/api/v1/movies/${genre}/${type}`,
-      params: {
-        genre: genre,
-        type: type,
-      },
-    };
-    axios
-      .request(option)
-      .then((response) => {
-        setMovies(response.data.results);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  });
-
+    axios.get(`/api/v1/tmdb/${genre}`)
+    .then(res => {
+      const results = res.data.results
+      setMovies(results)
+    })
+    .catch(err => console.error(err))
+  })
   
-
-  console.log("MOVIES:", movies);
   return (
     <div className="carousel-container">
       <div id="movie-list" className="movie-list">

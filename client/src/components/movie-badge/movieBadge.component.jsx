@@ -13,18 +13,20 @@ const MovieBadge = ({ movie }) => {
   const [ isShown, setIsShown ] = useState(false);
   const [ show, setShowModal] = useState(false);
   const [ list, setList ] = useState(false);
-
+  const IMG_URL = "https://image.tmdb.org/t/p/w780"
   return (
   <div className='movie-badge'
     onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}
   >
       <div className="movie-banner" onClick={() => setShowModal(!show)}>
-       <img className="banner" src={movie.imageurl} alt="" height="200px"/> 
+       <img className="banner" src={IMG_URL+movie.poster_path} alt="" height="200px"/> 
         <div className="title">
-          <p className='mov-title'>{movie.title}</p>
+          <p className='mov-title'>{movie.original_title}</p>
         </div>
-        <MovieModal show={show} movie={movie}/>
+
+        {/* { show && <MovieModal movie={movie}/> } */}
+        
       </div>
 
       <div className="netflix-logo">

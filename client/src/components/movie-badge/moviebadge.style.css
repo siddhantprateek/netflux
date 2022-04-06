@@ -37,6 +37,8 @@
 .movie-banner{
     height: 80%;
 }
+
+/* Movie option */
 .movie-options {
     position: relative;
     margin-top: 7.5rem;

@@ -6,6 +6,33 @@ import "../../components/movies-list/movielist.styles.css";
 import { useState } from "react";
 const Home = () => {
   const [muted, setMute] = useState(false);
+  const MOVIES_CONTAINERS = [
+    {
+      GenreHeader: "Trending Now",
+      genre: "romance",
+      type: "movies" 
+    },
+    {
+      GenreHeader: "TV Shows",
+      genre: "thriller",
+      type: "tv" 
+    },
+    {
+      GenreHeader: "Children & Family TV",
+      genre: "family",
+      type: "movies" 
+    },
+    {
+      GenreHeader: "Only On Netflix",
+      genre: "action",
+      type: "movies" 
+    },
+    {
+      GenreHeader: "Trending Now",
+      genre: "comedy",
+      type: "movies" 
+    }
+  ]
   return (
     <div className="home">
       <div className="home-banner">
@@ -55,7 +82,7 @@ const Home = () => {
         <h3>Hollywood Movies</h3>
         <MovieList genre="Crime" type="movies" />
       </div>
-
+      {/* Top 10 Movies */}
       <div className="trending top-10">
         <div className="carousel-container">
           <h4>Top10</h4>
@@ -73,22 +100,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="trending-now">
-        <h4>Trending Now</h4>
-        {/* <MovieList genre="romance" type="movies" /> */}
-      </div>
-      <div className="tv-shows">
-        <h4>TV Shows</h4>
-        {/* <MovieList genre="Thriller" type="tvshows" /> */}
-      </div>
-      <div className="children-family-tv">
-        <h4>Children & Family TV</h4>
-        {/* <MovieList genre="Family" type="movies" /> */}
-      </div>
-      <div className="Only-on-Netflix">
-        <h4>Only On Netflix</h4>
-        {/* <MovieList genre="action" type="movies" /> */}
-      </div>
+      {
+      MOVIES_CONTAINERS.map( data => (
+        <div className="movie-list-container">
+          <h4>{data.GenreHeader}</h4>
+          <MovieList genre={data.genre} type="movies" />
+        </div>
+      ))}
+
     </div>
   );
 };

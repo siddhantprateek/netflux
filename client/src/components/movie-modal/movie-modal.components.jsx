@@ -1,11 +1,10 @@
 //title, src, rating, genre, release, synopsis, type
 import "./movie-modal.styles.css";
+const MovieModal = ({ movie }) => {
+const IMG_URL = "https://image.tmdb.org/t/p/w780"
 
-const MovieModal = ({ show, movie }) => {
-
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
   return (
-    <div className={showHideClassName}>
+    <div className={`"modal display-block`}>
 
         <div className="movie-modal-content">
             <div className="close-div">
@@ -13,7 +12,7 @@ const MovieModal = ({ show, movie }) => {
             </div>
 
             <div className="modal-movie-desc">
-                <img className="modal-banner" src={movie.imageurl} alt="" />
+                <img className="modal-banner" src={IMG_URL+movie.poster_path} alt="" />
                 <div className="movie-desc-content">
                     <div className="movie-title-header">
                         <h1 className="modal-title">{movie.title}</h1>
