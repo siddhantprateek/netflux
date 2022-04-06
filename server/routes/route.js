@@ -79,15 +79,144 @@ router.get('/v1/movies.json', (req, res)=>{
       });
 })
 
-router.get('/v1/tmdb', (req, res) => {
-  console.log('tmdb api')
-  // const URL = "https://api.themoviedb.org/3/movie/550?api_key=c96214dc2fc0c7a95518471e8c0ad1f3&language=en-US/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10"
-  axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${process.env.TMDB_API}&language=en-US/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10`)
+const MOVIE_URL = "https://api.themoviedb.org/3/movie/popular"
+// Action          28       ✅
+// Adventure       12       ✅  
+// Animation       16       ✅
+// Comedy          35       ✅
+// Crime           80       ✅
+// Documentary     99       ✅ 
+// Drama           18       ✅ 
+// Family          10751    ✅
+// Fantasy         14       ✅
+// History         36       ✅
+// Horror          27       ✅
+// Music           10402 
+// Mystery         9648     ✅
+// Romance         10749    ✅
+// Science Fiction 878      ✅
+// TV Movie        10770
+// Thriller        53       ✅
+// War             10752    ✅
+// Western         37       ✅
+router.get('/v1/tmdb/Western', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=37`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/music', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10402`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/war', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10752`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/mystery', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=9648`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/science-fiction', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=878`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+
+router.get('/v1/tmdb/history', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=36`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/comedy', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=35`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/fantasy', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=14`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/family', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10751`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/animation', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=16`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/horror', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=27`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/adventure', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=12`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/documentary', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=99`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/crime', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=80`)
     .then((response) => res.json(response.data))
     .catch((error) => console.error(error))
 
 })
 
+router.get('/v1/tmdb/drama', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=18`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
 
+})
 
+router.get('/v1/tmdb/thriller', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=53`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+
+})
+
+router.get('/v1/tmdb/action', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=28`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+
+})
+
+router.get('/v1/tmdb/romance', (req, res) => {
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10749`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
+
+router.get('/v1/tmdb/romance/:hello/:feel', (req, res) => {
+  const genre = req.params
+  res.status(200).send({genre})
+  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10749`)
+    .then((response) => res.json(response.data))
+    .catch((error) => console.error(error))
+})
 module.exports = router;
