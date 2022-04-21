@@ -5,6 +5,11 @@ const PORT = process.env.PORT || 4000
 const app = express();
 dotenv.config();
 
+// build
+// app.use(express.static(path.join(__dirname, "/client/build")))
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '/client/build', 'index.html'))
+// })
 
 // middleware
 app.use(express.json())

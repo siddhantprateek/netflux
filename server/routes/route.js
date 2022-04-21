@@ -212,11 +212,16 @@ router.get('/v1/tmdb/romance', (req, res) => {
     .catch((error) => console.error(error))
 })
 
+router.get('/v1/tmdb/romance1', async (req, res) => {
+  const response = await axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10749`)
+  res.status(200).send(response.data)
+})
+
 router.get('/v1/tmdb/romance/:hello/:feel', (req, res) => {
-  const genre = req.params
-  res.status(200).send({genre})
-  axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10749`)
-    .then((response) => res.json(response.data))
-    .catch((error) => console.error(error))
+  const {hello, feel} = req.params
+  res.status(200).send({hello, feel})
+  // axios.get(`${MOVIE_URL}?api_key=${process.env.TMDB_API}&with_genres=10749`)
+  //   .then((response) => res.json(response.data))
+  //   .catch((error) => console.error(error))
 })
 module.exports = router;
