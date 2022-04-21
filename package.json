@@ -1,0 +1,23 @@
+{
+  "name": "netflux",
+  "version": "1.0.0",
+  "description": "![](https://i.imgur.com/QflsiAd.png)",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhantprateek/netflux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddhantprateek/netflux/issues"
+  },
+  "homepage": "https://github.com/siddhantprateek/netflux#readme"
+}
