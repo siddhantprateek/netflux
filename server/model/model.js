@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose')
-const { Schema } = mongoose.Schema()
+const { Schema } = mongoose
 
 const mymovieListSchema = new Schema({
     title: String,
@@ -8,7 +8,7 @@ const mymovieListSchema = new Schema({
     poster_path: String,
     popularity: Number,
     overview: String,
-    release_date: Date,
+    release_date: String,
     vote_average: Number
 })
 

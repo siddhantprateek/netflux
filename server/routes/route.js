@@ -1,7 +1,7 @@
 const axios = require('axios');
 const express = require('express');
 const router = express.Router();
-
+const Model = require('../model/model')
 
 
 router.get('/search/movies', (req, res) => {
@@ -224,4 +224,26 @@ router.get('/v1/tmdb/romance/:hello/:feel', (req, res) => {
   //   .then((response) => res.json(response.data))
   //   .catch((error) => console.error(error))
 })
+
+router.get('/v1/tmdb/mylist', async (req, res) => {
+  try {
+    const response = await Model.find({})
+    res.status(200).send(response)
+  }catch(err){
+    res.send(err)
+  }
+})
+
+router.post('/v1/add', async(req, res) => {
+  const data = req.body
+  try{
+    const response = await Model.create(data)
+    res.status(201).json(response)
+  }catch(err){
+    res.send(err)
+  }
+})
+
+
+
 module.exports = router;
