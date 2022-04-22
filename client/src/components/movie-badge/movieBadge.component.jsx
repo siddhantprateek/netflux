@@ -6,13 +6,32 @@ import ADD from '../../assets/mediaicons/add.png';
 import DISLIKE from '../../assets/mediaicons/dislike.png';
 import LIKE from '../../assets/mediaicons/like.png';
 import ADDED from '../../assets/mediaicons/added.png';
-import MovieModal from '../movie-modal/movie-modal.components';
+import axios from '../../config/axios'
+// import MovieModal from '../movie-modal/movie-modal.components';
 
 import { useState } from 'react';
 const MovieBadge = ({ movie }) => {
   const [ isShown, setIsShown ] = useState(false);
   const [ show, setShowModal] = useState(false);
   const [ list, setList ] = useState(false);
+  const AddtoMyList = async () => {
+    const data = await axios.post('/api/v1/add', {
+      title: movie.original_title,
+      backdrop_path: movie.backdrop_path,
+      poster_path: movie.poster_path,
+      popularity: movie.popularity,
+      overview: movie.overview,
+      release_date: movie.release_date,
+      vote_average: movie.vote_average
+    })
+    console.log(data)
+  }
+  const handleAddMovieClick = () => {
+    setList(!list)
+    AddtoMyList()
+  }
+
+
   const IMG_URL = "https://image.tmdb.org/t/p/w780"
   return (
   <div className='movie-badge'
@@ -37,7 +56,7 @@ const MovieBadge = ({ movie }) => {
         isShown && (
         <div className="movie-options">
             <img src={PLAY} className="media-icon" alt="" />
-            <img src={list ? ADDED : ADD}className="media-icon" alt="" onClick={() => setList(!list)}/>
+            <img src={list ? ADDED : ADD}className="media-icon" alt="" onClick={handleAddMovieClick}/>
             <img src={LIKE} className="media-icon" alt="" />
             <img src={DISLIKE} className="media-icon" alt="" />
         </div>)

@@ -1,6 +1,6 @@
 import './App.css';
 import { Footer, Header } from './components';
-import { Home, TVSHOW, Profile, NoMatch, New, Login, SignUp } from './routes'; 
+import { Home, TVSHOW, Profile, NoMatch, New, Login, SignUp, MyList } from './routes'; 
 import { Routes, Route } from 'react-router-dom';
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
@@ -17,6 +17,7 @@ function App() {
         <Route path='/manage/profiles' element={<Profile />} />
         <Route path='/*' element={<NoMatch />} />
         <Route path='/new' element={<New/>} />
+        <Route path='/mylist' element={<MyList />} />
       </Routes>
       <Footer/>
     </div>

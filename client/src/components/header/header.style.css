@@ -94,5 +94,12 @@ a {
   padding: .4rem;
   width: 100%;
   color: whitesmoke;
+}
 
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }
