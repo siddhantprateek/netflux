@@ -16,7 +16,7 @@ export const UserAuthContextProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const LoginIn = (email, password) => {
+    const LogIn = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -36,7 +36,7 @@ export const UserAuthContextProvider = ({children}) => {
     })
 
     return (
-        <useAuthContext.Provider value={{user, SignUp, LoginIn, LogOut}}>
+        <useAuthContext.Provider value={{user, SignUp, LogIn, LogOut}}>
             {children}
         </useAuthContext.Provider>
     )

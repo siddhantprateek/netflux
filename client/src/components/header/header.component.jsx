@@ -4,11 +4,23 @@ import SearchIcon from '../../assets/search-icon.png';
 import './header.style.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import { useUserAuth } from '../../context/context';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [ showsearch, setSearch ] = useState(false)
   const setshowClass = showsearch ? 'browse display-block' : 'browse display-none';
+  const { LogOut } = useUserAuth()
+  const navigate = useNavigate()
+  const handleLogOut = async () => {
+      try {
+          await LogOut()
+          navigate("/in/login")
+      }catch(error){
+          console.log(error.message)
+      }
+  }
+
   return (
   <div className="nav-bar">
       <header className='nav-container'>
@@ -36,7 +48,7 @@ const Header = () => {
                         <a href="/">Children</a>
                         <a href="/">Account</a>
                         <a href="/">Help Center</a>
-                        <a href="/">Sign out of Netflix</a>
+                        <a href="/" onClick={handleLogOut}>Sign out of Netflix</a>
                     </div>
                 </div>
             </div>
