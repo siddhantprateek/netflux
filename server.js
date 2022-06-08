@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
+const path = require('path')
 
 // server config
 const PORT = process.env.PORT || 4000
@@ -9,10 +10,10 @@ const app = express();
 dotenv.config();
 
 // build
-// app.use(express.static(path.join(__dirname, "/client/build")))
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '/client/build', 'index.html'))
-// })
+app.use(express.static(path.join(__dirname, "./client/build")))
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
 
 // database connection
 mongoose.connect(process.env.ATLAS_DB_URI)
@@ -24,11 +25,6 @@ db.once('open', () => {
 // middleware
 app.use(express.json())
 app.use(cors());
-
-// routes
-app.get('/', (req, res) => {
-  res.send('server is running');
-})
 
 app.use('/api', require('./routes/route.js'))
 

@@ -4,10 +4,20 @@
   "description": "![](https://i.imgur.com/QflsiAd.png)",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.25.0",
+    "cassandra-driver": "^4.6.3",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
     "concurrently": "^7.0.0"
   },
   "scripts": {
     "dev": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "client": "cd client && npm run start",
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
