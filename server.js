@@ -14,6 +14,27 @@ app.use(express.static(path.join(__dirname, "./client/build")))
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build', 'index.html'))
 })
+app.get('/tvshows', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+app.get('/new', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+app.get('/tvshows', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+app.get('/in/login', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+app.get('/mylist', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+app.get('/in', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
 
 // database connection
 mongoose.connect(process.env.ATLAS_DB_URI)

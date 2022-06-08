@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/in/login' element={<Login />} />
-          <Route path='/in/' element={<SignUp />} />
+          <Route path='/in' element={<SignUp />} />
           <Route path='/tvshows' element={<TVSHOW />} />
           <Route path='/manage/profiles' element={<Profile />} />
           <Route path='/*' element={<NoMatch />} />
