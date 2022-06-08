@@ -14,7 +14,7 @@
     "concurrently": "^7.0.0"
   },
   "scripts": {
-    "dev": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+    "dev": "concurrently \"npm run server\" \"cd client && npm run start\"",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "client": "cd client && npm run start",
     "server": "nodemon server.js",
